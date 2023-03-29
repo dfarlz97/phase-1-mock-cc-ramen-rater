@@ -79,6 +79,14 @@
       "comment": "terrible",
       "rating": "2",
       "id": 10
+    },
+    {
+      "name": "Daniellle",
+      "restaurant": "Hunters",
+      "image": "",
+      "comment": "good service",
+      "rating": "8",
+      "id": 11
     }
   ]
 }

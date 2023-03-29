@@ -22,7 +22,6 @@ display the image for each of the ramen using an `img` tag inside the
 fetch(ramensUrl)
   .then(res => res.json())
   .then(data => data.forEach(ramen => {
-    console.log(ramen)
     const ramenImg = document.createElement('img');
     ramenImg.src = ramen.image
     ramenImg.alt = ramen.name
@@ -32,11 +31,11 @@ Click on an image from the `#ramen-menu` div and see all the info about that
 ramen displayed inside the `#ramen-detail` div and where it says
 `insert comment here` and `insert rating here`.
 */
-      ramenImg.addEventListener('click', (e) => {
+    ramenImg.addEventListener('click', (e) => {
       ramenImage.src = ramen.image
       ramenImage.alt = ramen.name
-      ramenName.innerText = ramen.name
-      ramenRestaurant.innerText = ramen.restaurant
+      ramenName.textContent = ramen.name
+      ramenRestaurant.textContent = ramen.restaurant
     })
     ramenMenu.appendChild(ramenImg)
   })
@@ -73,10 +72,10 @@ newRamenForm.addEventListener('submit', (e) => {
       ramenImg.addEventListener('click', (e) => {
         ramenImage.src = imageObj.image
         ramenImage.alt = imageObj.name
-        ramenName.innerText = imageObj.name
-        ramenRestaurant.innerText = imageObj.restaurant
-        ramenRating.innerText = imageObj.rating
-        ramenComment.innerText = imageObj.comment
+        ramenName.textContent = imageObj.name
+        ramenRestaurant.textContent = imageObj.restaurant
+        ramenRating.textContent = imageObj.rating
+        ramenComment.textContent = imageObj.comment
       })
 
       ramenMenu.appendChild(ramenImg)
